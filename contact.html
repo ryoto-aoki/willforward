@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Willforward Contact - お問い合わせ">
+    <title>Contact | 株式会社Willforward</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            padding: 160px 0 80px;
+            text-align: center;
+            background: var(--color-bg-alt);
+        }
+
+        .page-title {
+            font-family: var(--font-en);
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .page-subtitle {
+            font-size: 1rem;
+            color: var(--color-text-sub);
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 24px 120px;
+        }
+
+        .form-group {
+            margin-bottom: 32px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--color-text);
+        }
+
+        .form-label .required {
+            color: #d32f2f;
+            margin-left: 4px;
+            font-size: 0.8rem;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+            color: var(--color-text);
+            background: var(--color-bg);
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--color-text-muted);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 200px;
+        }
+
+        .form-submit {
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .btn-submit {
+            background: var(--color-text);
+            color: var(--color-bg);
+            border: 1px solid var(--color-text);
+            padding: 12px 48px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: var(--font-en);
+            letter-spacing: 0.1em;
+        }
+
+        .btn-submit:hover {
+            background: transparent;
+            color: var(--color-text);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/header-logo.png" alt="Willforward" class="header-logo-img">
+            </a>
+            <nav class="nav">
+                <a href="mvv.html" class="nav-link">About</a>
+                <a href="business-policy.html" class="nav-link">Business</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="https://www.wantedly.com/companies/willforward" target="_blank" rel="noopener noreferrer"
+                    class="nav-link">Recruit</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1 class="page-title">CONTACT</h1>
+        <p class="page-subtitle">お問い合わせ</p>
+    </div>
+
+    <main class="contact-container">
+        <form action="mail.php" method="POST">
+            <div class="form-group">
+                <label for="name" class="form-label">お名前<span class="required">必須</span></label>
+                <input type="text" id="name" name="name" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label for="furigana" class="form-label">フリガナ<span class="required">必須</span></label>
+                <input type="text" id="furigana" name="furigana" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">メールアドレス<span class="required">必須</span></label>
+                <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone" class="form-label">電話番号</label>
+                <input type="tel" id="phone" name="phone" class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label for="company" class="form-label">所属（会社）名</label>
+                <input type="text" id="company" name="company" class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label for="message" class="form-label">お問い合わせ内容</label>
+                <textarea id="message" name="message" class="form-textarea"></textarea>
+            </div>
+
+            <div class="form-submit">
+                <button type="submit" class="btn-submit">SEND</button>
+            </div>
+        </form>
+
+        <a href="index.html" class="back-link">← トップページに戻る</a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <p class="footer-logo">Willforward</p>
+                    <p class="footer-slogan">志の連鎖で、世界を一つの家族に。</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">NAVIGATE</h4>
+                        <a href="mvv.html">About</a>
+                        <a href="business-policy.html">Business</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="https://www.wantedly.com/companies/willforward" target="_blank"
+                            rel="noopener noreferrer">Recruit</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">CONNECT</h4>
+                        <a href="#">Media</a>
+                        <a href="https://www.wantedly.com/companies/willforward" target="_blank"
+                            rel="noopener noreferrer">Recruit</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">CONTACT</h4>
+                        <p>東京都渋谷区</p>
+                        <p>info@willforward.co.jp</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 Will Forward Inc. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

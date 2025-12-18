@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Willforward MVV (Mission, Vision, Value) - 私たちの使命、目指す未来、そして大切にする価値観について。">
+    <title>MVV (Mission / Vision / Value) | 株式会社Willforward</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            padding: 160px 0 80px;
+            text-align: center;
+            background: var(--color-bg-alt);
+        }
+
+        .page-title {
+            font-family: var(--font-en);
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .page-subtitle {
+            font-size: 1rem;
+            color: var(--color-text-sub);
+        }
+
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 24px 120px;
+        }
+
+        .article-section {
+            margin-bottom: 120px;
+        }
+
+        .mvv-heading-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .mvv-icon {
+            font-size: 3rem;
+        }
+
+        .mvv-title-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mvv-type {
+            font-family: var(--font-en);
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+            color: var(--color-text-muted);
+            margin-bottom: 8px;
+        }
+
+        .mvv-main-title {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .article-text {
+            font-size: 1rem;
+            line-height: 2.2;
+            color: var(--color-text);
+            margin-bottom: 32px;
+        }
+
+        .article-quote {
+            background: var(--color-bg-alt);
+            padding: 40px;
+            border-radius: 8px;
+            margin: 48px 0;
+            font-style: italic;
+            color: var(--color-text-sub);
+            line-height: 2;
+            text-align: center;
+        }
+
+        .article-list {
+            list-style: none;
+            margin: 32px 0;
+            padding: 32px;
+            background: var(--color-bg-alt);
+            border-radius: 8px;
+        }
+
+        .article-list li {
+            margin-bottom: 16px;
+            padding-left: 1.5em;
+            position: relative;
+            line-height: 1.8;
+        }
+
+        .article-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--color-text-muted);
+        }
+
+        .article-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 80px;
+            color: var(--color-text-sub);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 767px) {
+            .mvv-heading-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .mvv-main-title {
+                font-size: 1.6rem;
+            }
+        }
+
+        .mvv-image-container {
+            margin-bottom: 48px;
+            text-align: center;
+        }
+
+        .mvv-mission-image {
+            max-width: 100%;
+            height: auto;
+            width: 300px;
+            /* Adjust as needed */
+        }
+
+        .mvv-vision-image {
+            max-width: 100%;
+            height: auto;
+            width: 600px;
+            /* Wider image for vision */
+        }
+
+        .mvv-value-image {
+            max-width: 100%;
+            height: auto;
+            width: 400px;
+        }
+
+        .culture-list {
+            display: grid;
+            gap: 48px;
+        }
+
+        .culture-item {
+            background: var(--color-bg-alt);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        /* Culture Colors */
+        /* Culture Colors */
+        .culture-love {
+            background-color: #f9f0f0;
+            /* Desaturated Red */
+        }
+
+        .culture-love .culture-title {
+            color: #a85e5e;
+            /* Desaturated Red Text */
+            border-color: rgba(168, 94, 94, 0.3);
+        }
+
+        .culture-creativity {
+            background-color: #f0f6fa;
+            /* Desaturated Blue */
+        }
+
+        .culture-creativity .culture-title {
+            color: #5e7ca8;
+            /* Desaturated Blue Text */
+            border-color: rgba(94, 124, 168, 0.3);
+        }
+
+        .culture-freedom {
+            background-color: #f2f8f2;
+            /* Desaturated Green */
+        }
+
+        .culture-freedom .culture-title {
+            color: #5ea86b;
+            /* Desaturated Green Text */
+            border-color: rgba(94, 168, 107, 0.3);
+        }
+
+        .culture-responsibility {
+            background-color: #fbfaf0;
+            /* Desaturated Yellow */
+        }
+
+        .culture-responsibility .culture-title {
+            color: #a8965e;
+            /* Desaturated Yellow/Brown Text */
+            border-color: rgba(168, 150, 94, 0.3);
+        }
+
+        .culture-honest {
+            background-color: #f7f2f8;
+            /* Desaturated Purple */
+        }
+
+        .culture-honest .culture-title {
+            color: #8a5ea8;
+            /* Desaturated Purple Text */
+            border-color: rgba(138, 94, 168, 0.3);
+        }
+
+        .culture-title {
+            font-family: var(--font-en);
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--color-border);
+            color: var(--color-text);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/header-logo.png" alt="Willforward" class="header-logo-img">
+            </a>
+            <nav class="nav">
+                <a href="mvv.html" class="nav-link">About</a>
+                <a href="business-policy.html" class="nav-link">Business</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="https://www.wantedly.com/companies/willforward" target="_blank" rel="noopener noreferrer"
+                    class="nav-link">Recruit</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1 class="page-title">MISSION / VISION / VALUE</h1>
+        <p class="page-subtitle">私たちの指針</p>
+    </div>
+
+    <main class="article-container">
+
+        <!-- Mission -->
+        <section class="article-section">
+            <div class="mvv-heading-wrapper">
+                <div class="mvv-title-group">
+                    <span class="mvv-type">Mission</span>
+                    <h2 class="mvv-main-title">Willforward（ウィルフォワード）</h2>
+                </div>
+            </div>
+
+            <div class="mvv-image-container">
+                <img src="assets/mission-logo.jpg" alt="Willforward Logo" class="mvv-mission-image">
+            </div>
+
+            <p class="article-text">
+                Willforward（ウィルフォワード）という社名は、<br>
+                「will（意志）」と「forward（前へ）」を組み合わせた造語です。
+            </p>
+            <p class="article-text">
+                「Pay it forward（恩送り）」という映画のように、<br>
+                一人の小さな意志（Will）が、次の誰かへ、さらにその先へと伝わり、<br>
+                世界全体を少しずつ良くしていく――<br>
+                私たちは、そんな“意志の連鎖”こそが未来を創る力だと信じています。
+            </p>
+            <p class="article-text">
+                僕らの <strong>Will（意志）そのものが forward（未来）を創っている。</strong><br>
+                だからこそ、私たちは「幸せに溢れる未来」を自らの手で創り出したい。
+            </p>
+            <p class="article-text">
+                ウィルフォワードのロゴは、その想いを象徴しています。<br>
+                W（Will）は赤いハート＝愛と情熱、<br>
+                F（Forward）は青い炎＝知恵と創造性を表し、<br>
+                愛が知恵によって世の中に広がり、<br>
+                人々の「i（愛）」に火を灯していく構図になっています。
+            </p>
+            <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 48px 0;">
+            <p class="article-text">
+                今、世界はかつてないスピードで変化しています。<br>
+                AIやテクノロジーが人の働き方や生き方そのものを変え、<br>
+                社会や文化、価値観さえも書き換えようとしています。
+            </p>
+            <p class="article-text">
+                そんな時代だからこそ、私たちは <strong>「人の意志」に立ち返る必要がある。</strong><br>
+                どれだけ社会が自動化されても、<br>
+                未来を形づくるのは「何を成し遂げたいか」という人間の意思と想いです。
+            </p>
+            <p class="article-text">
+                私たちは、<strong>自らの意志をもって未来を創造し、その意志を次の誰かへ、そして社会へと繋げていく。</strong><br>
+                それがウィルフォワードの使命です。
+            </p>
+            <div class="article-quote">
+                一人の意志が未来を創る。<br>
+                小さなWillがForwardしていくことで、<br>
+                世界は少しずつ、より良い方向へ動いていく。<br>
+                <br>
+                <strong>That’s Willforward.</strong>
+            </div>
+        </section>
+
+        <!-- Vision -->
+        <section class="article-section">
+            <div class="mvv-heading-wrapper">
+
+                <div class="mvv-title-group">
+                    <span class="mvv-type">Vision</span>
+                    <h2 class="mvv-main-title">世界を一つの家族にする</h2>
+                </div>
+            </div>
+
+            <div class="mvv-image-container">
+                <img src="assets/vision-image.jpg" alt="We are the world" class="mvv-vision-image">
+            </div>
+
+            <p class="article-text">
+                地球の人口は増え続け、気候変動や環境破壊、戦争や格差の拡大など、<br>
+                私たちが直面する課題はますます複雑で、国や組織だけでは解決できないものになっています。<br>
+                そしてAIやテクノロジーの進化は、人の生き方・働き方・価値観をも急速に変えようとしています。
+            </p>
+            <p class="article-text">
+                私たちはこの時代に生きる者として、ただ変化を受け入れるのではなく、<br>
+                <strong>「どう生きるか」「何を残すか」</strong> を問い直さなければなりません。
+            </p>
+            <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 48px 0;">
+            <p class="article-text">
+                もし人々が、自分たちを「国の違う他人」ではなく、<br>
+                <strong>同じ星に生きる“家族”</strong>として捉えることができたなら――。<br>
+                宗教や文化、立場や考え方の違いを超えて、<br>
+                互いを理解し、支え合い、共に生きることができるはずです。
+            </p>
+            <p class="article-text">
+                「そんなバッドエンディングはお断りだ。」<br>
+                その言葉の通り、私たちは“恐れ”ではなく“希望”を選びます。
+            </p>
+            <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 48px 0;">
+            <p class="article-text">
+                AIが社会を効率化し、資本が世界を動かしても、<br>
+                <strong>人の意志や想いが中心にある限り、未来は温かくなれる。</strong><br>
+                私たちは、テクノロジーの進化を“分断”ではなく“調和”に活かす。<br>
+                一人ひとりの志が火種となり、社会全体が支え合う世界を目指します。
+            </p>
+            <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 48px 0;">
+            <p class="article-text">
+                「世界を一つの家族にする」とは、<br>
+                壮大な理想ではなく、<strong>一人の小さな意志の積み重ね</strong>です。<br>
+                自分を大切にし、身近な人を大切にする。<br>
+                その輪が家庭・組織・地域・社会へと広がり、<br>
+                やがて地球規模の共感と信頼のネットワークになる。
+            </p>
+            <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 48px 0;">
+            <p class="article-text">
+                私たちはその起点となり、<br>
+                <strong>“人が人を幸せにする循環”を生み出す企業</strong>であり続けます。
+            </p>
+            <div class="article-quote">
+                一人の意志が、世界を変える。<br>
+                私たちは、愛と知恵をもって、<br>
+                「世界を一つの家族にする」未来を選び続ける。
+            </div>
+        </section>
+
+        <!-- Value -->
+        <section class="article-section">
+            <div class="mvv-heading-wrapper">
+
+                <div class="mvv-title-group">
+                    <span class="mvv-type">Value</span>
+                    <h2 class="mvv-main-title">インサイドアウト</h2>
+                </div>
+            </div>
+
+            <div class="mvv-image-container">
+                <img src="assets/value-image.png" alt="Inside Out" class="mvv-value-image">
+            </div>
+
+            <p class="article-text">
+                「世界を変えようと思うなら、まずは自分から変える必要がある。」<br>
+                それがウィルフォワードの根幹にある考え方です。
+            </p>
+            <p class="article-text">
+                世界を一つの家族にするというビジョンは、<br>
+                誰か遠くの誰かを変えることではなく、<br>
+                <strong>“自分をどう生きるか”</strong> から始まります。
+            </p>
+            <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 48px 0;">
+            <p class="article-text">
+                年齢・経験・立場に関係なく、誰の人生も中心には「自分」がいます。<br>
+                だからこそ、まずは自分を大切にし、自分を満たすこと。<br>
+                そしてそのエネルギーをもって、身近な人を大切にし、<br>
+                互いに支え合える“家族のような関係”を築いていくこと。<br>
+                その小さな循環こそが、社会や世界を変えていく一歩です。
+            </p>
+            <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 48px 0;">
+            <p class="article-text">
+                私たちは「顧客第一主義」という言葉を使いません。<br>
+                まず大切にすべきは、円のより中心に近い存在である社員であり、社員の家族です。
+            </p>
+            <p class="article-text">
+                会社は収入を得る場であると同時に、<br>
+                人生の多くの時間を過ごす“生きる場所”であり、<br>
+                人間関係を育み、社会的責任を果たす場でもあります。
+            </p>
+            <p class="article-text">だからこそ、ウィルフォワードは以下の4つを大切にしています。</p>
+            <ul class="article-list">
+                <li>求める生活水準を満たす収入が得られること</li>
+                <li>良好な人間関係があること</li>
+                <li>仕事にやりがいと誇りを持てること</li>
+                <li>世の中の役に立っていると実感できること</li>
+            </ul>
+            <p class="article-text">
+                これらが満たされることで、人は自らを高め、幸せを実感し、<br>
+                その幸福が他者へと波及していきます。<br>
+                それが“インサイドアウト”の本質です。
+            </p>
+            <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 48px 0;">
+            <p class="article-text">
+                私たちは、<br>
+                「ビッグ」ではなく「グレート」――<br>
+                大きさではなく、周囲に良い影響を与える“偉大さ”を目指します。
+            </p>
+            <p class="article-text">
+                自分を磨き、満たし、愛をもって行動する人が、<br>
+                その影響を通じて周囲を照らし、やがて世界を温めていく。<br>
+                その連鎖をつくることこそが、ウィルフォワードのValueです。
+            </p>
+            <div class="article-quote">
+                世界を変える力は、いつも自分の内側にある。<br>
+                自分を幸せにし、身近な人を幸せにし、<br>
+                その輪を広げていくことが、<br>
+                「世界を一つの家族にする」最初の一歩である。
+            </div>
+        </section>
+
+        <!-- Culture -->
+        <section class="article-section">
+            <div class="mvv-heading-wrapper">
+                <div class="mvv-title-group">
+                    <span class="mvv-type">Culture</span>
+                    <h2 class="mvv-main-title">5つのカルチャー</h2>
+                </div>
+            </div>
+
+            <div class="culture-list">
+                <div class="culture-item culture-love">
+                    <h3 class="culture-title">Love - 愛 -</h3>
+                    <p class="article-text">
+                        私たちは世界に唯一無二の存在である自分を大切にします。 そして、自分を産み育ててくれた両親をはじめとした家族を大切にします。 支えてくれた恩人、志を同じくする同志、
+                        たくさんの人生の幸を与えてくれる友人・知人、自分に関わる全ての人への感謝をいつも感じます。 だからこそ、例え草の根運動のような小さな行動だとしても愛をもって取り組みます。
+                        それこそが、世界を愛で包む道だと信じています。 ウィルフォワードはそんな心がほっこり温まる愛情があふれた人間たちの会社です。
+                    </p>
+                </div>
+
+                <div class="culture-item culture-creativity">
+                    <h3 class="culture-title">Creativity - 創造性 -</h3>
+                    <p class="article-text">
+                        立場や経験・価値観が違えば、 仮に同じ環境にいて同じものを見ても異なる意見・解釈を持つため、少なからず差が生まれます。
+                        この差はどちらかが間違っているのではなく、ただの違いであることを理解しています。 そして、この2つの対立する状況を争うことなく、
+                        創造性を発揮することで双方を満足させる第三の道が必ずあることを信じています。 ウィルフォワードは自分たちはアイデアを生む天才だと信じて、
+                        創造性を絶え間ない努力により磨きつづけ、アイデアを出し続ける人間たちの会社です。
+                    </p>
+                </div>
+
+                <div class="culture-item culture-freedom">
+                    <h3 class="culture-title">Freedom - 自由 -</h3>
+                    <p class="article-text">
+                        私たちは自由です。今の自分を作っている全ては、 自分自身の過去の選択の結果であることを知っています。だからこそ、一度の人生、
+                        自分が本当にたどり着きたい目的地すなわちビジョンを明確にする努力をします。 なぜ、そのビジョンを実現したいのか、自分のWill(志)を何度も確認します。
+                        そして、不安や怖れ、しがらみを乗り越え、常に一歩踏み出し続けます。 ウィルフォワードは一人ひとりの自由を阻害する要素をできる限り取り除き、
+                        お互いの自由を尊重し合うことを認め合った人間たちの会社です。
+                    </p>
+                </div>
+
+                <div class="culture-item culture-responsibility">
+                    <h3 class="culture-title">Responsibility - 責任 -</h3>
+                    <p class="article-text">
+                        自由と責任は表裏一体です。 真の自由を得るために、自分の下した選択による全ての結果に責任をとる覚悟を持ちます。 たとえ、自分にとって好ましくない結果だとしても、
+                        誰かのせい、社会のせいにすることなく、全てのことに自分が源であると考えます。 ウィルフォワードは一人ひとりの責任をもった個人によって、チームのゴールを共有し、
+                        チームにおける自分の役割を最高のパフォーマンスを発揮することで全うし、 達成を創りだす人間たちの会社です。
+                    </p>
+                </div>
+
+                <div class="culture-item culture-honest">
+                    <h3 class="culture-title">Honest - 誠実 -</h3>
+                    <p class="article-text">
+                        ICT技術（ソーシャルメディアなど）の進化により、 社会はより開かれ、より繋がっていきます。 故に良いものは良い、悪いものは悪いと社会に伝わっていきます。
+                        ありのままの自分でいるために、ありのままの自分を受け入れ、 ありのままの自分を磨き続ける努力をし続けます。 そして、何一つ後ろめたいことなく、ありのままの自分ですっきりと生きます。
+                        ウィルフォワードはそんな誠実さを土台にした裏表のない人間臭い人間たちの会社です。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <a href="index.html" class="back-link">← トップページに戻る</a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <p class="footer-logo">Willforward</p>
+                    <p class="footer-slogan">志の連鎖で、世界を一つの家族に。</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">NAVIGATE</h4>
+                        <a href="mvv.html">About</a>
+                        <a href="business-policy.html">Business</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="https://www.wantedly.com/companies/willforward" target="_blank"
+                            rel="noopener noreferrer">Recruit</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">CONNECT</h4>
+                        <a href="#">Media</a>
+                        <a href="https://www.wantedly.com/companies/willforward" target="_blank"
+                            rel="noopener noreferrer">Recruit</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">CONTACT</h4>
+                        <p>東京都渋谷区</p>
+                        <p>info@willforward.co.jp</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 Will Forward Inc. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
