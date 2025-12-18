@@ -118,7 +118,12 @@
             <a href="index.html" class="logo">
                 <img src="assets/header-logo.png" alt="Willforward" class="header-logo-img">
             </a>
-            <nav class="nav">
+            <button class="menu-toggle" aria-label="メニューを開く">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+            <nav class="nav nav-desktop">
                 <a href="mvv.html" class="nav-link">About</a>
                 <a href="business-policy.html" class="nav-link">Business</a>
                 <a href="contact.html" class="nav-link">Contact</a>
@@ -127,6 +132,16 @@
             </nav>
         </div>
     </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="nav nav-mobile">
+        <a href="mvv.html" class="nav-link">About</a>
+        <a href="business-policy.html" class="nav-link">Business</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="https://www.wantedly.com/companies/willforward" target="_blank" rel="noopener noreferrer"
+            class="nav-link">Recruit</a>
+    </nav>
+    <div class="menu-overlay"></div>
 
     <div class="page-header">
         <h1 class="page-title">BUSINESS POLICY</h1>
@@ -293,6 +308,7 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

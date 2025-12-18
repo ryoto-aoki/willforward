@@ -7,6 +7,41 @@
     'use strict';
 
     // ========================================
+    // Mobile Menu Toggle
+    // ========================================
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMobile = document.querySelector('.nav-mobile');
+    const overlay = document.querySelector('.menu-overlay');
+
+    if (menuToggle && navMobile && overlay) {
+        // Toggle menu
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMobile.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = navMobile.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking overlay
+        overlay.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navMobile.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close menu when clicking nav link
+        navMobile.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMobile.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+
+    // ========================================
     // Scroll Fade-in Animation
     // ========================================
     const fadeElements = document.querySelectorAll('.fade-in');

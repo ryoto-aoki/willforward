@@ -21,7 +21,12 @@
             <a href="#" class="logo">
                 <img src="assets/header-logo.png" alt="Willforward" class="header-logo-img">
             </a>
-            <nav class="nav">
+            <button class="menu-toggle" aria-label="メニューを開く">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+            <nav class="nav nav-desktop">
                 <a href="mvv.html" class="nav-link">About</a>
                 <a href="business-policy.html" class="nav-link">Business</a>
                 <a href="contact.html" class="nav-link">Contact</a>
@@ -30,6 +35,16 @@
             </nav>
         </div>
     </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="nav nav-mobile">
+        <a href="mvv.html" class="nav-link">About</a>
+        <a href="business-policy.html" class="nav-link">Business</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="https://www.wantedly.com/companies/willforward" target="_blank" rel="noopener noreferrer"
+            class="nav-link">Recruit</a>
+    </nav>
+    <div class="menu-overlay"></div>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
@@ -119,7 +134,7 @@
             </div>
             <div class="message-content fade-in">
                 <h2 class="section-title">TIME RECOGNITION</h2>
-                <h3 class="section-subtitle">AI時代、人間の価値はどこにあるのか</h3>
+                <h3 class="section-subtitle">AI時代、<br class="sp-only">人間の価値はどこにあるのか</h3>
                 <p class="section-text">
                     テクノロジーが急速に進化する今、私たちは問いかけます。
                     知識やスキルがAIに代替される時代に、人間にしかできないこと——それは「意志（Will）」を持ち、自らの人生を選び取ること。
@@ -223,13 +238,13 @@
             </h2>
             <div class="policy-grid">
                 <div class="policy-card card-red fade-in">
-                    <h3 class="policy-title">Will Out（ウィルアウト）</h3>
+                    <h3 class="policy-title">Will Out<span class="policy-title-jp">（ウィルアウト）</span></h3>
                     <p class="policy-text">
                         マーケットや競合ではなく、「自分たちの意志（Will）」を起点に事業を構想する考え方です。AI時代において最も重要な「自分が何を成し遂げたいのか」という問いに向き合い、内なる熱源から価値を創造します。
                     </p>
                 </div>
                 <div class="policy-card card-blue fade-in">
-                    <h3 class="policy-title">Inside Incubation（インサイドインキュベーション）</h3>
+                    <h3 class="policy-title">Inside Incubation<span class="policy-title-jp">（インサイドインキュベーション）</span></h3>
                     <p class="policy-text">
                         単なる出資や支援ではなく、一度仲間として迎え入れ、同じ志を持つチームの中で事業を育てるアプローチです。互いの才能（Can）を掛け合わせ、内側からイノベーションを起こすことで、社会に真の価値を提供します。
                     </p>

@@ -126,6 +126,10 @@
         }
 
         @media (max-width: 767px) {
+            .page-title {
+                font-size: 1.5rem;
+            }
+
             .mvv-heading-wrapper {
                 flex-direction: column;
                 align-items: flex-start;
@@ -134,6 +138,15 @@
 
             .mvv-main-title {
                 font-size: 1.6rem;
+            }
+
+            .article-text br,
+            .article-quote br {
+                display: none;
+            }
+
+            .mvv-title-jp {
+                font-size: 0.65em;
             }
         }
 
@@ -248,7 +261,12 @@
             <a href="index.html" class="logo">
                 <img src="assets/header-logo.png" alt="Willforward" class="header-logo-img">
             </a>
-            <nav class="nav">
+            <button class="menu-toggle" aria-label="メニューを開く">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+            <nav class="nav nav-desktop">
                 <a href="mvv.html" class="nav-link">About</a>
                 <a href="business-policy.html" class="nav-link">Business</a>
                 <a href="contact.html" class="nav-link">Contact</a>
@@ -257,6 +275,16 @@
             </nav>
         </div>
     </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="nav nav-mobile">
+        <a href="mvv.html" class="nav-link">About</a>
+        <a href="business-policy.html" class="nav-link">Business</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="https://www.wantedly.com/companies/willforward" target="_blank" rel="noopener noreferrer"
+            class="nav-link">Recruit</a>
+    </nav>
+    <div class="menu-overlay"></div>
 
     <div class="page-header">
         <h1 class="page-title">MISSION / VISION / VALUE</h1>
@@ -270,7 +298,7 @@
             <div class="mvv-heading-wrapper">
                 <div class="mvv-title-group">
                     <span class="mvv-type">Mission</span>
-                    <h2 class="mvv-main-title">Willforward（ウィルフォワード）</h2>
+                    <h2 class="mvv-main-title">Willforward<span class="mvv-title-jp">（ウィルフォワード）</span></h2>
                 </div>
             </div>
 
@@ -537,6 +565,7 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
