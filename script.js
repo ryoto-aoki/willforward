@@ -155,11 +155,13 @@
     if (membersMarquee && membersTrack) {
         let isDragging = false;
         let startX = 0;
-        let currentPosition = 0;
         let prevPosition = 0;
         let animationId = null;
         const speed = 1; // pixels per frame (adjust for speed)
         const trackWidth = membersTrack.scrollWidth / 2; // Half because content is duplicated
+        
+        // Start from middle position for seamless loop appearance
+        let currentPosition = -trackWidth / 2;
 
         // Disable CSS animation, use JS instead
         membersTrack.style.animation = 'none';
@@ -168,9 +170,13 @@
         const autoScroll = () => {
             if (!isDragging) {
                 currentPosition -= speed;
-                // Loop back when reached half (duplicate point)
+                // Loop back when reached end of first set
                 if (Math.abs(currentPosition) >= trackWidth) {
                     currentPosition = 0;
+                }
+                // Loop forward when dragged past start
+                if (currentPosition > 0) {
+                    currentPosition = -trackWidth;
                 }
                 membersTrack.style.transform = `translateX(${currentPosition}px)`;
             }

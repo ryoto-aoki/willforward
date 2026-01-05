@@ -1041,7 +1041,16 @@ img {
     display: flex;
     gap: 32px;
     width: max-content;
-    animation: scroll 60s linear infinite;
+    animation: members-scroll 60s linear infinite;
+}
+
+@keyframes members-scroll {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(-75%);
+    }
 }
 
 .member-thumb {
